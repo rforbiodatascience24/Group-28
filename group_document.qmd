@@ -34,12 +34,28 @@ Hello my friends, can you see me?
 2*2
 ```
 
+#### New analysis
+
+Branching
+
+```{r}
+print("My first branching")
+```
+
 ## Frederik
 
 Jeg skriver også lige lidt
 
 ```{r}
 print("Her laver jeg noget")
+```
+
+#### Ny header 4
+
+Jeg skriver lige lidt mere
+
+```{r}
+3^3
 ```
 
 ## Casper
@@ -65,6 +81,7 @@ if (2 + 2 == 4) {
 
 Quick maths
 
+
 ## New element
 
 This is again some text from my own branch
@@ -74,3 +91,16 @@ sin(3.14)
 ```
 
 Lets hope it works this time
+
+
+
+## New analysis 
+
+Very cool analysis I have made just now
+
+```{r}
+print("wow very cool code")
+print("crazy programming")
+print(2+2)
+```
+
