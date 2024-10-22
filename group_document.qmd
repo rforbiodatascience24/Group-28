@@ -95,8 +95,6 @@ a <- 2+2
 print(a)
 ```
 
-
-
 ## New element
 
 This is again some text from my own branch
@@ -107,10 +105,14 @@ sin(3.14)
 
 Lets hope it works this time
 
+<<<<<<< HEAD
 
 
 ## New analysis 
 >>>>>>> fccb22f48d935cf6d79cfa0dc6cac881cea1a80a
+=======
+## New analysis
+>>>>>>> 4a658effb6d635281e755a70b2b8eb5580a4e8ac
 
 Very cool analysis I have made just now
 
