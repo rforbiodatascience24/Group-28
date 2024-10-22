@@ -64,3 +64,11 @@ if (2 + 2 == 4) {
 ```
 
 Quick maths
+
+## New element
+
+This is again some text from my own branch
+
+```{r}
+sin(3.14)
+```
