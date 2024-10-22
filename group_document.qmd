@@ -72,3 +72,13 @@ if (2 + 2 == 4) {
 ```
 
 Quick maths
+
+## New analysis 
+
+Very cool analysis I have made just now
+
+```{r}
+print("wow very cool code")
+print("crazy programming")
+print(2+2)
+```
