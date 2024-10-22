@@ -13,6 +13,12 @@ editor: visual
 
 ## Tidying data
 
+```{r}
+pca_fit <- biopsy %>% 
+  select(where(is.numeric)) %>% # retain only numeric columns
+  prcomp(scale = TRUE) # do PCA on scaled data
+```
+
 ## Visual data inspection
 
 When performing PCA, we'll want to perform the following steps:
@@ -30,3 +36,25 @@ pca_fit <- biopsy %>%
 ```
 
 ## Variance explained
+
+Uses function
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues")
+```
+
+The variance is plotted
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues") %>%
+  ggplot(aes(PC, percent)) +
+  geom_col(fill = "#56B4E9", alpha = 0.8) +
+  scale_x_continuous(breaks = 1:9) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.01))
+  ) +
+  theme_minimal_hgrid(12)
+```
