@@ -2,3 +2,5 @@
 .Rhistory
 .RData
 .Ruserdata
+data/_raw/
+dummy_file.R

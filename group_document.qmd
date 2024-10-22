@@ -83,6 +83,8 @@ Here is some text
 
 Quick maths
 
+## New analysis
+
 ### New feature
 
 Here is some more text
@@ -101,6 +103,8 @@ sin(3.14)
 ```
 
 Lets hope it works this time
+
+## New analysis
 
 ## New analysis
 
