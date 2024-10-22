@@ -28,7 +28,19 @@ if(a == 4){print(b)}
 
 ## Helena
 
+Hello my friends, can you see me?
+
+```{r}
+2*2
+```
+
 ## Frederik
+
+Jeg skriver også lige lidt
+
+```{r}
+print("Her laver jeg noget")
+```
 
 ## Casper
 
