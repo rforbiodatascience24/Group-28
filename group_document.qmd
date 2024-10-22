@@ -33,3 +33,7 @@ if(a == 4){print(b)}
 ## Casper
 
 ## Laura
+```{r}
+2+2-1
+```
+Quick maths
