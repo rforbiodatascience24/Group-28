@@ -53,7 +53,8 @@ pca_fit <- biopsy |>
 
 Now, we want to plot the data in PC coordinates. In general, this means combining the PC coordinates with the original dataset, so we can color points by categorical variables present in the original data but removed for the PCA. We do this with the `augment()` function from broom, which takes as arguments the fitted model and the original data. The columns containing the fitted coordinates are called `.fittedPC1`, `.fittedPC2`, etc.
 
-```{pca_fit |>}
+```{r}
+pca_fit |>
   augment(biopsy) |>  # add original dataset back in
   ggplot(aes(.fittedPC1, .fittedPC2, color = outcome)) + 
   geom_point(size = 1.5) +
@@ -63,8 +64,38 @@ Now, we want to plot the data in PC coordinates. In general, this means combinin
   theme_half_open(12) + background_grid()
 ```
 
-=======
->>>>>>> 22d238cb43a0fda84d346e89ed9ba5f029cfcd57
+Next, we plot the rotation matrix. The rotation matrix is stored as pca_fit\$rotation, but here we’ll extract it using the tidy() function from broom. When applied to prcomp objects, the tidy() function takes an additional argument matrix, which we set to matrix = "rotation" to extract the rotation matrix.
+
+```{r}
+# extract rotation matrix
+pca_fit %>%
+  tidy(matrix = "rotation")
+```
+
+Now in the context of a plot:
+
+```{r}
+# define arrow style for plotting
+arrow_style <- arrow(
+  angle = 20, ends = "first", type = "closed", length = grid::unit(8, "pt")
+)
+
+# plot rotation matrix
+pca_fit %>%
+  tidy(matrix = "rotation") %>%
+  pivot_wider(names_from = "PC", names_prefix = "PC", values_from = "value") %>%
+  ggplot(aes(PC1, PC2)) +
+  geom_segment(xend = 0, yend = 0, arrow = arrow_style) +
+  geom_text(
+    aes(label = column),
+    hjust = 1, nudge_x = -0.02, 
+    color = "#904C2F"
+  ) +
+  xlim(-1.25, .5) + ylim(-.5, 1) +
+  coord_fixed() + # fix aspect ratio to 1:1
+  theme_minimal_grid(12)
+```
+
 ## Variance explained
 
 Uses function
