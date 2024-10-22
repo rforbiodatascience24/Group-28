@@ -42,6 +42,14 @@ Jeg skriver også lige lidt
 print("Her laver jeg noget")
 ```
 
+#### Ny header 4
+
+Jeg skriver lige lidt mere
+
+```{r}
+3^3
+```
+
 ## Casper
 
 Det her er noget tekst.
