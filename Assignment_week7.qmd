@@ -7,6 +7,14 @@ format:
 editor: visual
 ---
 
+#### Group members:
+
+Helena Bentsen Møller s204585\
+Laura Jul Emilie Christiansen s204582\
+Casper Holm Harreby s204558\
+Frederik Holmstrup s203540\
+Emma K. Christensen s204543
+
 ## Loading libraries
 
 Loading libraries, please don't delete again

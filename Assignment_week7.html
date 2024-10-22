@@ -3099,6 +3099,14 @@ vertical-align: -.125em;
 </header>
 
 
+<section id="group-members" class="level4">
+<h4 class="anchored" data-anchor-id="group-members">Group members:</h4>
+<p>Helena Bentsen Møller s204585<br>
+Laura Jul Emilie Christiansen s204582<br>
+Casper Holm Harreby s204558<br>
+Frederik Holmstrup s203540<br>
+Emma K. Christensen s204543</p>
+</section>
 <section id="loading-libraries" class="level2">
 <h2 class="anchored" data-anchor-id="loading-libraries">Loading libraries</h2>
 <p>Loading libraries, please don’t delete again</p>
@@ -3127,8 +3135,8 @@ dbl (9): clump_thickness, uniform_cell_size, uniform_cell_shape, marg_adhesi...
 <section id="tidying-data" class="level2">
 <h2 class="anchored" data-anchor-id="tidying-data">Tidying data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="ot">&lt;-</span> biopsy <span class="sc">%&gt;%</span> </span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric)) <span class="sc">%&gt;%</span> <span class="co"># retain only numeric columns</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="ot">&lt;-</span> biopsy <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric)) <span class="sc">|&gt;</span>  <span class="co"># retain only numeric columns</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prcomp</span>(<span class="at">scale =</span> <span class="cn">TRUE</span>) <span class="co"># do PCA on scaled data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -3220,7 +3228,7 @@ dbl (9): clump_thickness, uniform_cell_size, uniform_cell_shape, marg_adhesi...
 <h2 class="anchored" data-anchor-id="variance-explained">Variance explained</h2>
 <p>Uses function</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="sc">|&gt;</span> </span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>(<span class="at">matrix =</span> <span class="st">&quot;eigenvalues&quot;</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9 × 4
@@ -3239,7 +3247,7 @@ dbl (9): clump_thickness, uniform_cell_size, uniform_cell_shape, marg_adhesi...
 </div>
 <p>The variance is plotted</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="sc">%&gt;%</span></span>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>pca_fit <span class="sc">|&gt;</span> </span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>(<span class="at">matrix =</span> <span class="st">&quot;eigenvalues&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(PC, percent)) <span class="sc">+</span></span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">&quot;#56B4E9&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
