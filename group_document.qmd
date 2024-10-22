@@ -92,8 +92,6 @@ a <- 2+2
 print(a)
 ```
 
-
-
 ## New element
 
 This is again some text from my own branch
@@ -104,9 +102,7 @@ sin(3.14)
 
 Lets hope it works this time
 
-
-
-## New analysis 
+## New analysis
 
 Very cool analysis I have made just now
 
