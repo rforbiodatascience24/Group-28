@@ -51,15 +51,6 @@ pca_fit <- biopsy |>
   prcomp(scale = TRUE) # do PCA on scaled data
 ```
 
-As an alternative to `scale = TRUE`, we could also have scaled the data by explicitly invoking the `scale()` function.
-
-```{r}
-pca_fit <- biopsy 
-  select(where(is.numeric)) |>  # retain only numeric columns
-  scale() |>  # scale data
-  prcomp() # do PCA
-```
-
 Now, we want to plot the data in PC coordinates. In general, this means combining the PC coordinates with the original dataset, so we can color points by categorical variables present in the original data but removed for the PCA. We do this with the `augment()` function from broom, which takes as arguments the fitted model and the original data. The columns containing the fitted coordinates are called `.fittedPC1`, `.fittedPC2`, etc.
 
 ```{pca_fit |>}
@@ -72,6 +63,8 @@ Now, we want to plot the data in PC coordinates. In general, this means combinin
   theme_half_open(12) + background_grid()
 ```
 
+=======
+>>>>>>> 22d238cb43a0fda84d346e89ed9ba5f029cfcd57
 ## Variance explained
 
 Uses function
