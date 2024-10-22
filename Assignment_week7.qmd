@@ -9,7 +9,23 @@ editor: visual
 
 ## Loading libraries
 
+Loading the relevant libraries for the assignment
+
+```{r}
+#| eval: true
+#| message: false
+#| warning: false
+
+library(tidyverse)
+library(broom)
+library(cowplot)
+```
+
 ## Loading data
+
+```{r}
+biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
+```
 
 ## Tidying data
 
