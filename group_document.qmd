@@ -30,6 +30,12 @@ if(a == 4){print(b)}
 
 ## Frederik
 
+Jeg skriver også lige lidt
+
+```{r}
+print("Her laver jeg noget")
+```
+
 ## Casper
 
 Det her er noget tekst.
@@ -46,7 +52,9 @@ if (2 + 2 == 4) {
 ```
 
 ## Laura
+
 ```{r}
 2+2-1
 ```
+
 Quick maths
