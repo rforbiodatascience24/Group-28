@@ -75,12 +75,36 @@ if (2 + 2 == 4) {
 
 ## Laura
 
+Here is some text
+
 ```{r}
 2+2-1
 ```
 
 Quick maths
 
+<<<<<<< HEAD
+=======
+### New feature
+
+Here is some more text
+
+```{r}
+a <- 2+2
+print(a)
+```
+
+## New element
+
+This is again some text from my own branch
+
+```{r}
+sin(3.14)
+```
+
+Lets hope it works this time
+
+>>>>>>> 4a658effb6d635281e755a70b2b8eb5580a4e8ac
 ## New analysis
 
 Very cool analysis I have made just now
