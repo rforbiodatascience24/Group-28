@@ -6,6 +6,26 @@ editor: visual
 
 ## Emma
 
+Loading libraries
+
+```{r}
+library("tidyverse")
+```
+
+Trying to calculate very difficult calculations
+
+```{r}
+a <- 2+2
+
+print(a)
+```
+
+```{r}
+b <- "hello"
+
+if(a == 4){print(b)}
+```
+
 ## Helena
 
 ## Frederik
