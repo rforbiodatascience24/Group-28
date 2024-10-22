@@ -84,6 +84,10 @@ Here is some text
 Quick maths
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+## New analysis
+>>>>>>> cde6f0ffe80750a92a8188efb960961b55fac74f
 =======
 ### New feature
 
@@ -104,8 +108,18 @@ sin(3.14)
 
 Lets hope it works this time
 
+<<<<<<< HEAD
 >>>>>>> 4a658effb6d635281e755a70b2b8eb5580a4e8ac
+=======
+<<<<<<< HEAD
+
+
+## New analysis 
+>>>>>>> fccb22f48d935cf6d79cfa0dc6cac881cea1a80a
+=======
+>>>>>>> cde6f0ffe80750a92a8188efb960961b55fac74f
 ## New analysis
+>>>>>>> 4a658effb6d635281e755a70b2b8eb5580a4e8ac
 
 Very cool analysis I have made just now
 
