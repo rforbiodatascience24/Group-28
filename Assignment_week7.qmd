@@ -9,26 +9,32 @@ editor: visual
 
 ## Loading libraries
 
-Loading the relevant libraries for the assignment
-
-```{r}
-#| eval: true
-#| message: false
-#| warning: false
-
-library(tidyverse)
-library(broom)
-library(cowplot)
-```
-
 ## Loading data
-
-```{r}
-biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
-```
 
 ## Tidying data
 
 ## Visual data inspection
 
 ## Variance explained
+
+Uses function
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues")
+```
+
+The variance is plotted
+
+```{r}
+pca_fit %>%
+  tidy(matrix = "eigenvalues") %>%
+  ggplot(aes(PC, percent)) +
+  geom_col(fill = "#56B4E9", alpha = 0.8) +
+  scale_x_continuous(breaks = 1:9) +
+  scale_y_continuous(
+    labels = scales::percent_format(),
+    expand = expansion(mult = c(0, 0.01))
+  ) +
+  theme_minimal_hgrid(12)
+```
