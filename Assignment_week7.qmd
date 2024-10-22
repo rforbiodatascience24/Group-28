@@ -13,6 +13,12 @@ editor: visual
 
 ## Tidying data
 
+```{r}
+pca_fit <- biopsy %>% 
+  select(where(is.numeric)) %>% # retain only numeric columns
+  prcomp(scale = TRUE) # do PCA on scaled data
+```
+
 ## Visual data inspection
 
 ## Variance explained
