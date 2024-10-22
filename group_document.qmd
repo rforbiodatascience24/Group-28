@@ -8,7 +8,7 @@ editor: visual
 
 ## Helena
 
-Hello my friends
+Hello my friends, can you see me?
 
 ```{r}
 2*2
