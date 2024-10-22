@@ -6,6 +6,26 @@ editor: visual
 
 ## Emma
 
+Loading libraries
+
+```{r}
+library("tidyverse")
+```
+
+Trying to calculate very difficult calculations
+
+```{r}
+a <- 2+2
+
+print(a)
+```
+
+```{r}
+b <- "hello"
+
+if(a == 4){print(b)}
+```
+
 ## Helena
 
 Hello my friends, can you see me?
@@ -18,4 +38,21 @@ Hello my friends, can you see me?
 
 ## Casper
 
+Det her er noget tekst.
+
+```{r}
+print("Nu printer jeg lige lidt")
+```
+
+```{r}
+## Nu kommer der lidt hurtigt matematik
+if (2 + 2 == 4) {
+  print("minus one that is 3")
+}
+```
+
 ## Laura
+```{r}
+2+2-1
+```
+Quick maths
