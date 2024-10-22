@@ -30,8 +30,8 @@ biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
 ## Tidying data
 
 ```{r}
-pca_fit <- biopsy %>% 
-  select(where(is.numeric)) %>% # retain only numeric columns
+pca_fit <- biopsy |> 
+  select(where(is.numeric)) |>  # retain only numeric columns
   prcomp(scale = TRUE) # do PCA on scaled data
 ```
 
@@ -101,14 +101,14 @@ pca_fit %>%
 Uses function
 
 ```{r}
-pca_fit %>%
+pca_fit |> 
   tidy(matrix = "eigenvalues")
 ```
 
 The variance is plotted
 
 ```{r}
-pca_fit %>%
+pca_fit |> 
   tidy(matrix = "eigenvalues") %>%
   ggplot(aes(PC, percent)) +
   geom_col(fill = "#56B4E9", alpha = 0.8) +
