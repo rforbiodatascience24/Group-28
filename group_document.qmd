@@ -13,3 +13,7 @@ editor: visual
 ## Casper
 
 ## Laura
+```{r}
+2+2-1
+```
+Quick maths
