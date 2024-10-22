@@ -15,4 +15,18 @@ editor: visual
 
 ## Visual data inspection
 
+When performing PCA, we'll want to perform the following steps:
+
+1.  Looking at the data in PC coordinates
+2.  Looking at the rotation matrix
+3.  Looking at the variance explained by each PC.
+
+We'll start by
+
+```{r}
+pca_fit <- biopsy %>% 
+  select(where(is.numeric)) %>% # retain only numeric columns
+  prcomp(scale = TRUE) # do PCA on scaled data
+```
+
 ## Variance explained
