@@ -1,6 +1,9 @@
 ---
 title: "Microreport week 7"
-format: html
+author: "Group 29"
+format:
+  html:
+    embed-resources: true
 editor: visual
 ---
 
