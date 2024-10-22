@@ -34,6 +34,14 @@ Hello my friends, can you see me?
 2*2
 ```
 
+#### New analysis
+
+Branching
+
+```{r}
+print("My first branching")
+```
+
 ## Frederik
 
 Jeg skriver også lige lidt
