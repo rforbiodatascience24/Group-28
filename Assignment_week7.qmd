@@ -11,6 +11,10 @@ editor: visual
 
 ## Loading data
 
+```{r}
+biopsy <- read_csv("https://wilkelab.org/classes/SDS348/data_sets/biopsy.csv")
+```
+
 ## Tidying data
 
 ```{r}
