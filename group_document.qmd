@@ -28,9 +28,28 @@ if(a == 4){print(b)}
 
 ## Helena
 
+Hello my friends, can you see me?
+
+```{r}
+2*2
+```
+
 ## Frederik
 
 ## Casper
+
+Det her er noget tekst.
+
+```{r}
+print("Nu printer jeg lige lidt")
+```
+
+```{r}
+## Nu kommer der lidt hurtigt matematik
+if (2 + 2 == 4) {
+  print("minus one that is 3")
+}
+```
 
 ## Laura
 
