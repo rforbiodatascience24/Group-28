@@ -36,6 +36,12 @@ Hello my friends, can you see me?
 
 ## Frederik
 
+Jeg skriver også lige lidt
+
+```{r}
+print("Her laver jeg noget")
+```
+
 ## Casper
 
 Det her er noget tekst.
