@@ -59,8 +59,19 @@ if (2 + 2 == 4) {
 
 ## Laura
 
+Here is some text
+
 ```{r}
 2+2-1
 ```
 
 Quick maths
+
+### New feature
+
+Here is some more text
+
+```{r}
+a <- 2+2
+print(a)
+```
